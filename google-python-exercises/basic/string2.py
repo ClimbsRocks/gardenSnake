@@ -8,6 +8,8 @@
 
 # Additional basic string exercises
 
+import math
+
 # D. verbing
 # Given a string, if its length is at least 3,
 # add 'ing' to its end.
@@ -51,9 +53,10 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
+  aLen = int(math.ceil(len(a)/2.0))
+  bLen = int(math.ceil(len(b)/2.0))
   # +++your code here+++
-  return
-
+  return a[0:aLen] + b[0:bLen] + a[aLen:] + b[bLen:]
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
