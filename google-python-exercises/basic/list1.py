@@ -21,8 +21,12 @@
 # and last chars of the string are the same.
 # Note: python does not have a ++ operator, but += works.
 def match_ends(words):
+  results = []
+  for word in words :
+    if len(word) >= 2 and word[0] == word[-1]:
+      results.append(word)
   # +++your code here+++
-  return
+  return len(results)
 
 
 # B. front_x
